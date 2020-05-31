@@ -352,6 +352,20 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       blueprint3d.model.scene.addItem(itemType, modelUrl, metadata);
       setCurrentState(scope.states.DEFAULT);
     });
+
+    $("#add-items-7").find(".add-item").mousedown(function(e) { //mousedown - Кнопка мыши нажата
+      var modelUrl = $(this).attr("model-url");
+      var itemType = parseInt($(this).attr("model-type"));
+      var metadata = {
+        itemName: $(this).attr("model-name"),
+        resizable: true,
+        modelUrl: modelUrl,
+        itemType: itemType
+      }
+
+      blueprint3d.model.scene.addItem(itemType, modelUrl, metadata);
+      setCurrentState(scope.states.DEFAULT);
+    });
   }
 
   init();
