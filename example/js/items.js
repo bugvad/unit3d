@@ -164,6 +164,11 @@ $(document).ready(function() {
     */
   ]
 
+  
+
+  //запись элементов в JSON
+
+  var jsonText = JSON.stringify(items);
 
 
   var itemsDiv = $("#items-wrapper")
@@ -190,7 +195,7 @@ $(document).ready(function() {
     if (item.type == "7")
     {
       var item_price = (item.price) ? (item.price + ' p.') : '';
-      
+
       var htmlDoor = '<div class="col-sm-4">' +
                 '<a class="thumbnail add-item" model-name="' + 
                 item.name + 
@@ -206,7 +211,27 @@ $(document).ready(function() {
     }
   }
 
-
+  // var itemsDivSC = $("#items-wrapper-sc");
+  // for (var k = 0; k < items.length; k++) {
+  //   var item = items[k];
+  //   if (item.type == "7")
+  //   {
+  //     var item_price = (item.price) ? (item.price + ' p.') : '';
+      
+  //     var htmlDoor = '<div class="col-sm-4">' +
+  //               '<a class="thumbnail add-item" model-name="' + 
+  //               item.name + 
+  //               '" model-url="' +
+  //               item.model +
+  //               '" model-type="' +
+  //               item.type + 
+  //               '"><img src="' +
+  //               item.image + 
+  //               '" alt="Add Item"> '+ '<div id="wrapper"> <div id="first">' + item.name + '</div> <div id="second">' + item_price + '</div> </div>' + 
+  //               '</a></div>';
+  //     itemsDivDoor.append(htmlDoor);
+  //   }
+  // }
 
 // $("#items-wrapper-7").append('Привет');
 

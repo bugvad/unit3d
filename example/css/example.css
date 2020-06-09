@@ -85,6 +85,12 @@ div {
   color: #fff;
 }
 
+#sc {
+  /*margin-top: 20px;*/
+  /*margin-left: 5%;*/
+  font-size: 25px;
+}
+
 /*
  * Design
  */
@@ -112,11 +118,45 @@ div {
   overflow-y: auto; 
 }
 
+#add-items-7 {
+  display: none;
+}
+
+#add-items-sc {
+  display: none;
+  /*padding-top: 0px;*/
+  padding-left: 5%;
+}
+
 #main-controls {
   position: absolute;
   top: 20px;
   left: 20px;
   padding: 0;  
+}
+
+#left {
+  float: left;
+  margin-right: 40px;
+}
+
+#right {
+}
+
+#cart-title {
+  font-size: 20px;
+}
+
+#cart-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#cart-desc {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 #camera-controls {
@@ -145,6 +185,10 @@ div {
   padding: 5px 10px;
   z-index: 10;
   display: none;
+}
+
+#tovar {
+  width: 200px;
 }
 
 .add-item {
