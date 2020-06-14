@@ -356,9 +356,17 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       $("#categories").show(); //
     }
 
-    if (currentState == scope.states.SHOP && newState != scope.states.DOOR || currentState == scope.states.DOOR && newState != scope.states.SHOP) {
+    if (newState == scope.states.FLOORPLAN || newState == scope.states.DEFAULT) {
       $("#categories").hide();
     }
+
+    // if (currentState == scope.states.SHOP && 
+    //   (newState != scope.states.DOOR || newState != scope.states.CAT1 || newState != scope.states.CAT2 || newState != scope.states.CAT3 || newState != scope.states.CAT4 || newState != scope.states.CAT5 || newState != scope.states.CAT6 || newState != scope.states.CAT7 || newState != scope.states.CAT8 || newState != scope.states.CAT9 || newState != scope.states.CAT10) 
+    //   || 
+    //   (currentState == scope.states.DOOR || currentState != scope.states.CAT1 || currentState != scope.states.CAT2 || currentState != scope.states.CAT3 || currentState != scope.states.CAT4 || currentState != scope.states.CAT5 || currentState != scope.states.CAT6 || currentState != scope.states.CAT7 || currentState != scope.states.CAT8 || currentState != scope.states.CAT9 || currentState != scope.states.CAT10) 
+    //   && newState != scope.states.SHOP) {
+    //   $("#categories").hide();
+    // }
 
 
     if (newState == scope.states.FLOORPLAN) {
@@ -382,6 +390,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_Screen_Shot_2014-10-27_at_8.04.12_PM.png",
       "model" : "models/js/closed-door28x80_baked.js",
+      "category" : "7",
       "type" : "7"
     }, 
     {
@@ -389,6 +398,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_Screen_Shot_2014-10-27_at_8.22.46_PM.png",
       "model" : "models/js/open_door.js",
+      "category" : "7",
       "type" : "7"
     }, 
     {
@@ -396,27 +406,31 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_window.png",
       "model" : "models/js/whitewindow.js",
+      "category" : "9",
       "type" : "3"
     }, 
     {
-      "name" : "Кресло",
+      "name" : "Стул",
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_Church-Chair-oak-white_1024x1024.jpg",
       "model" : "models/js/gus-churchchair-whiteoak.js",
+      "category" : "3",
       "type" : "1"
     }, 
     {
-      "name" : "Красный стул",
+      "name" : "Красное кресло",
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_tn-orange.png",
       "model" : "models/js/ik-ekero-orange_baked.js",
+      "category" : "2",
       "type" : "1"
     },
     {
-      "name" : "Синий стул",
+      "name" : "Синее кресло",
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_ekero-blue3.png",
       "model" : "models/js/ik-ekero-blue_baked.js",
+      "category" : "2",
       "type" : "1"
     },
     {
@@ -424,6 +438,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_matera_dresser_5.png",
       "model" : "models/js/DWR_MATERA_DRESSER2.js",
+      "category" : "6",
       "type" : "1"
     }, 
     {
@@ -431,13 +446,15 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_img25o.jpg",
       "model" : "models/js/we-narrow6white_baked.js",
+      "category" : "6",
       "type" : "1"
     },  
     {
-      "name" : "Прикроватный столик теплый",
+      "name" : "Прикроватный столик светлый",
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_Blu-Dot-Shale-Bedside-Table.jpg",
       "model" : "models/js/bd-shalebedside-smoke_baked.js",
+      "category" : "4",
       "type" : "1"
     }, 
     {
@@ -445,6 +462,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_arch-white-oval-nightstand.jpg",
       "model" : "models/js/cb-archnight-white_baked.js",
+      "category" : "8",
       "type" : "1"
     }, 
     {
@@ -452,6 +470,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_TN-ikea-kvikine.png",
       "model" : "models/js/ik-kivine_baked.js",
+      "category" : "6",
       "type" : "1"
     }, 
     {
@@ -459,6 +478,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_nordli-bed-frame__0159270_PE315708_S4.JPG",
       "model" : "models/js/ik_nordli_full.js",
+      "category" : "5",
       "type" : "1"
     }, 
     {
@@ -466,13 +486,15 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_kendall-walnut-bookcase.jpg",
       "model" : "models/js/cb-kendallbookcasewalnut_baked.js",
+      "category" : "6",
       "type" : "1"
     }, 
         {
-      "name" : "Медиаконсоль свтелая",
+      "name" : "Медиаконсоль светлая",
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_clapboard-white-60-media-console-1.jpg",
       "model" : "models/js/cb-clapboard_baked.js",
+      "category" : "8",
       "type" : "1"
     }, 
         {
@@ -480,20 +502,15 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_moore-60-media-console-1.jpg",
       "model" : "models/js/cb-moore_baked.js",
+      "category" : "8",
       "type" : "1"
-    }, 
-       {
-      "name" : "Диван оливковый",
-      "price": 8000,
-      "image" : "models/thumbnails/thumbnail_img21o.jpg",
-      "model" : "models/js/we-crosby2piece-greenbaked.js",
-      "type" : "1"
-    }, 
+    },
     {
       "name" : "Диван серый",
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_rochelle-sofa-3.jpg",
       "model" : "models/js/cb-rochelle-gray_baked.js",
+      "category" : "1",
       "type" : "1"
     }, 
         {
@@ -501,6 +518,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_teca-storage-trunk.jpg",
       "model" : "models/js/cb-tecs_baked.js",
+      "category" : "8",
       "type" : "1"
     }, 
         {
@@ -508,6 +526,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_ore-white.png",
       "model" : "models/js/ore-3legged-white_baked.js",
+      "category" : "10",
       "type" : "1"
     },
     {
@@ -515,6 +534,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_stockholm-coffee-table__0181245_PE332924_S4.JPG",
       "model" : "models/js/ik-stockholmcoffee-brown.js",
+      "category" : "4",
       "type" : "1"
     }, 
     {
@@ -522,6 +542,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_Screen_Shot_2014-02-21_at_1.24.58_PM.png",
       "model" : "models/js/GUSossingtonendtable.js",
+      "category" : "4",
       "type" : "1"
     }, 
     {
@@ -529,6 +550,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_scholar-dining-table.jpg",
       "model" : "models/js/cb-scholartable_baked.js",
+      "category" : "4",
       "type" : "1"
     }, 
     {
@@ -536,6 +558,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_Screen_Shot_2014-01-28_at_6.49.33_PM.png",
       "model" : "models/js/BlakeAvenuejoshuatreecheftable.js",
+      "category" : "4",
       "type" : "1"
     },
     {
@@ -543,6 +566,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_cb-blue-block60x96.png",
       "model" : "models/js/cb-blue-block-60x96.js",
+      "category" : "11",
       "type" : "8"
     },
     {
@@ -550,9 +574,21 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "price": 8000,
       "image" : "models/thumbnails/thumbnail_nyc2.jpg",
       "model" : "models/js/nyc-poster2.js",
+      "category" : "11",
       "type" : "2"
     }
+   /*     
+   {
+      "name" : "",
+      "price": 8000,
+      "image" : "",
+      "model" : "",
+      "category" : "1",
+      "type" : "1"
+    }, 
+    */
   ]
+
 
     //Поиск по массиву объектов по названию
     var getProdInfo = function(prodName) {
@@ -624,8 +660,8 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       blueprint3d.model.scene.addItem(itemType, modelUrl, metadata);
       setCurrentState(scope.states.DEFAULT);
     });
-
-    $("#add-items-7").find(".add-item").mousedown(function(e) { //mousedown - Кнопка мыши нажата
+//.itemsPage
+    $(".itemsPage").find(".add-item").mousedown(function(e) { //mousedown - Кнопка мыши нажата
       var modelUrl = $(this).attr("model-url");
       var itemType = parseInt($(this).attr("model-type"));
       var metadata = {
