@@ -205,8 +205,18 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
   var tabs = {
     "FLOORPLAN" : $("#floorplan_tab"),
     "SHOP" : $("#items_tab"),
-    "DESIGN" : $("#design_tab"),
+    "CAT1" : $("#cat1_tab"),
+    "CAT2" : $("#cat2_tab"),
+    "CAT3" : $("#cat3_tab"),
+    "CAT4" : $("#cat4_tab"),
+    "CAT5" : $("#cat5_tab"),
+    "CAT6" : $("#cat6_tab"),
     "DOOR" : $("#doors_tab"),
+    "CAT8" : $("#cat8_tab"),
+    "CAT9" : $("#cat9_tab"),
+    "CAT10" : $("#cat10_tab"),
+    "CAT11" : $("#cat11_tab"),
+    "DESIGN" : $("#design_tab"),
     "SC" : $("#opencart")
   }
 
@@ -226,14 +236,54 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
       "div" : $("#add-items"),
       "tab" : tabs.SHOP
     },
+    "CAT1" : {
+          "div" : $("#add-items-1"),
+          "tab" : tabs.CAT1
+        },
+    "CAT2" : {
+          "div" : $("#add-items-2"),
+          "tab" : tabs.CAT2
+        },
+    "CAT3" : {
+          "div" : $("#add-items-3"),
+          "tab" : tabs.CAT3
+        },
+    "CAT4" : {
+          "div" : $("#add-items-4"),
+          "tab" : tabs.CAT4
+        },
+    "CAT5" : {
+          "div" : $("#add-items-5"),
+          "tab" : tabs.CAT5
+        },
+    "CAT6" : {
+          "div" : $("#add-items-6"),
+          "tab" : tabs.CAT6
+        },
     "DOOR" : {
       "div" : $("#add-items-7"),
       "tab" : tabs.DOOR
     },
+    "CAT8" : {
+          "div" : $("#add-items-8"),
+          "tab" : tabs.CAT8
+        },
+    "CAT9" : {
+          "div" : $("#add-items-9"),
+          "tab" : tabs.CAT9
+        },
+    "CAT10" : {
+          "div" : $("#add-items-10"),
+          "tab" : tabs.CAT10
+        },
+    "CAT11" : {
+          "div" : $("#add-items-11"),
+          "tab" : tabs.CAT11
+        },
     "SC" : {
       "div" : $("#add-items-sc"),
       "tab" : tabs.SC
-    }
+    },
   }
 
   // sidebar state
@@ -327,167 +377,182 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
     //Отрисовка элементов корзины
 
     var items = [
-     {
-        "name" : "Закрытая дверь",
-        "brand": "ИКЕЯ",
-        "price": 8000,
-        "image" : "models/thumbnails/thumbnail_Screen_Shot_2014-10-27_at_8.04.12_PM.png",
-        "model" : "models/js/closed-door28x80_baked.js",
-        "type" : "7"
-      }, 
-      {
-        "name" : "Open Door",
-        "image" : "models/thumbnails/thumbnail_Screen_Shot_2014-10-27_at_8.22.46_PM.png",
-        "model" : "models/js/open_door.js",
-        "type" : "7"
-      }, 
-      {
-        "name" : "Window",
-        "image" : "models/thumbnails/thumbnail_window.png",
-        "model" : "models/js/whitewindow.js",
-        "type" : "3"
-      }, 
-      {
-        "name" : "Chair",
-        "image" : "models/thumbnails/thumbnail_Church-Chair-oak-white_1024x1024.jpg",
-        "model" : "models/js/gus-churchchair-whiteoak.js",
-        "type" : "1"
-      }, 
-      {
-        "name" : "Red Chair",
-        "image" : "models/thumbnails/thumbnail_tn-orange.png",
-        "model" : "models/js/ik-ekero-orange_baked.js",
-        "type" : "1"
-      },
-      {
-        "name" : "Blue Chair",
-        "image" : "models/thumbnails/thumbnail_ekero-blue3.png",
-        "model" : "models/js/ik-ekero-blue_baked.js",
-        "type" : "1"
-      },
-      {
-        "name" : "Dresser - Dark Wood",
-        "image" : "models/thumbnails/thumbnail_matera_dresser_5.png",
-        "model" : "models/js/DWR_MATERA_DRESSER2.js",
-        "type" : "1"
-      }, 
-      {
-        "name" : "Dresser - White",
-        "image" : "models/thumbnails/thumbnail_img25o.jpg",
-        "model" : "models/js/we-narrow6white_baked.js",
-        "type" : "1"
-      },  
-      {
-        "name" : "Bedside table - Shale",
-        "image" : "models/thumbnails/thumbnail_Blu-Dot-Shale-Bedside-Table.jpg",
-        "model" : "models/js/bd-shalebedside-smoke_baked.js",
-        "type" : "1"
-      }, 
-      {
-        "name" : "Bedside table - White",
-        "image" : "models/thumbnails/thumbnail_arch-white-oval-nightstand.jpg",
-        "model" : "models/js/cb-archnight-white_baked.js",
-        "type" : "1"
-      }, 
-      {
-        "name" : "Wardrobe - White",
-        "image" : "models/thumbnails/thumbnail_TN-ikea-kvikine.png",
-        "model" : "models/js/ik-kivine_baked.js",
-        "type" : "1"
-      }, 
-      {
-        "name" : "Full Bed",
-        "image" : "models/thumbnails/thumbnail_nordli-bed-frame__0159270_PE315708_S4.JPG",
-        "model" : "models/js/ik_nordli_full.js",
-        "type" : "1"
-      }, 
-      {
-        "name" : "Bookshelf",
-        "image" : "models/thumbnails/thumbnail_kendall-walnut-bookcase.jpg",
-        "model" : "models/js/cb-kendallbookcasewalnut_baked.js",
-        "type" : "1"
-      }, 
-          {
-        "name" : "Media Console - White",
-        "image" : "models/thumbnails/thumbnail_clapboard-white-60-media-console-1.jpg",
-        "model" : "models/js/cb-clapboard_baked.js",
-        "type" : "1"
-      }, 
-          {
-        "name" : "Media Console - Black",
-        "image" : "models/thumbnails/thumbnail_moore-60-media-console-1.jpg",
-        "model" : "models/js/cb-moore_baked.js",
-        "type" : "1"
-      }, 
-         {
-        "name" : "Sectional - Olive",
-        "image" : "models/thumbnails/thumbnail_img21o.jpg",
-        "model" : "models/js/we-crosby2piece-greenbaked.js",
-        "type" : "1"
-      }, 
-      {
-        "name" : "Sofa - Grey",
-        "image" : "models/thumbnails/thumbnail_rochelle-sofa-3.jpg",
-        "model" : "models/js/cb-rochelle-gray_baked.js",
-        "type" : "1"
-      }, 
-          {
-        "name" : "Wooden Trunk",
-        "image" : "models/thumbnails/thumbnail_teca-storage-trunk.jpg",
-        "model" : "models/js/cb-tecs_baked.js",
-        "type" : "1"
-      }, 
-          {
-        "name" : "Floor Lamp",
-        "image" : "models/thumbnails/thumbnail_ore-white.png",
-        "model" : "models/js/ore-3legged-white_baked.js",
-        "type" : "1"
-      },
-      {
-        "name" : "Coffee Table - Wood",
-        "image" : "models/thumbnails/thumbnail_stockholm-coffee-table__0181245_PE332924_S4.JPG",
-        "model" : "models/js/ik-stockholmcoffee-brown.js",
-        "type" : "1"
-      }, 
-      {
-        "name" : "Side Table",
-        "image" : "models/thumbnails/thumbnail_Screen_Shot_2014-02-21_at_1.24.58_PM.png",
-        "model" : "models/js/GUSossingtonendtable.js",
-        "type" : "1"
-      }, 
-      {
-        "name" : "Dining Table",
-        "image" : "models/thumbnails/thumbnail_scholar-dining-table.jpg",
-        "model" : "models/js/cb-scholartable_baked.js",
-        "type" : "1"
-      }, 
-      {
-        "name" : "Dining table",
-        "image" : "models/thumbnails/thumbnail_Screen_Shot_2014-01-28_at_6.49.33_PM.png",
-        "model" : "models/js/BlakeAvenuejoshuatreecheftable.js",
-        "type" : "1"
-      },
-      {
-        "name" : "Blue Rug",
-        "image" : "models/thumbnails/thumbnail_cb-blue-block60x96.png",
-        "model" : "models/js/cb-blue-block-60x96.js",
-        "type" : "8"
-      },
-      {
-        "name" : "NYC Poster",
-        "image" : "models/thumbnails/thumbnail_nyc2.jpg",
-        "model" : "models/js/nyc-poster2.js",
-        "type" : "2"
-      }
-     /*     
-     {
-        "name" : "",
-        "image" : "",
-        "model" : "",
-        "type" : "1"
-      }, 
-      */
-    ]
+   {
+      "name" : "Закрытая дверь",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_Screen_Shot_2014-10-27_at_8.04.12_PM.png",
+      "model" : "models/js/closed-door28x80_baked.js",
+      "type" : "7"
+    }, 
+    {
+      "name" : "Открытая дверь",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_Screen_Shot_2014-10-27_at_8.22.46_PM.png",
+      "model" : "models/js/open_door.js",
+      "type" : "7"
+    }, 
+    {
+      "name" : "Окно",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_window.png",
+      "model" : "models/js/whitewindow.js",
+      "type" : "3"
+    }, 
+    {
+      "name" : "Кресло",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_Church-Chair-oak-white_1024x1024.jpg",
+      "model" : "models/js/gus-churchchair-whiteoak.js",
+      "type" : "1"
+    }, 
+    {
+      "name" : "Красный стул",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_tn-orange.png",
+      "model" : "models/js/ik-ekero-orange_baked.js",
+      "type" : "1"
+    },
+    {
+      "name" : "Синий стул",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_ekero-blue3.png",
+      "model" : "models/js/ik-ekero-blue_baked.js",
+      "type" : "1"
+    },
+    {
+      "name" : "Комод темный",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_matera_dresser_5.png",
+      "model" : "models/js/DWR_MATERA_DRESSER2.js",
+      "type" : "1"
+    }, 
+    {
+      "name" : "Комод белый",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_img25o.jpg",
+      "model" : "models/js/we-narrow6white_baked.js",
+      "type" : "1"
+    },  
+    {
+      "name" : "Прикроватный столик теплый",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_Blu-Dot-Shale-Bedside-Table.jpg",
+      "model" : "models/js/bd-shalebedside-smoke_baked.js",
+      "type" : "1"
+    }, 
+    {
+      "name" : "Тумбочка светлая",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_arch-white-oval-nightstand.jpg",
+      "model" : "models/js/cb-archnight-white_baked.js",
+      "type" : "1"
+    }, 
+    {
+      "name" : "Гардероб светлый",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_TN-ikea-kvikine.png",
+      "model" : "models/js/ik-kivine_baked.js",
+      "type" : "1"
+    }, 
+    {
+      "name" : "Кровать",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_nordli-bed-frame__0159270_PE315708_S4.JPG",
+      "model" : "models/js/ik_nordli_full.js",
+      "type" : "1"
+    }, 
+    {
+      "name" : "Книжная полка",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_kendall-walnut-bookcase.jpg",
+      "model" : "models/js/cb-kendallbookcasewalnut_baked.js",
+      "type" : "1"
+    }, 
+        {
+      "name" : "Медиаконсоль свтелая",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_clapboard-white-60-media-console-1.jpg",
+      "model" : "models/js/cb-clapboard_baked.js",
+      "type" : "1"
+    }, 
+        {
+      "name" : "Медиаконсоль темная",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_moore-60-media-console-1.jpg",
+      "model" : "models/js/cb-moore_baked.js",
+      "type" : "1"
+    }, 
+       {
+      "name" : "Диван оливковый",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_img21o.jpg",
+      "model" : "models/js/we-crosby2piece-greenbaked.js",
+      "type" : "1"
+    }, 
+    {
+      "name" : "Диван серый",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_rochelle-sofa-3.jpg",
+      "model" : "models/js/cb-rochelle-gray_baked.js",
+      "type" : "1"
+    }, 
+        {
+      "name" : "Деревянный сундук",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_teca-storage-trunk.jpg",
+      "model" : "models/js/cb-tecs_baked.js",
+      "type" : "1"
+    }, 
+        {
+      "name" : "Торшер",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_ore-white.png",
+      "model" : "models/js/ore-3legged-white_baked.js",
+      "type" : "1"
+    },
+    {
+      "name" : "Журнальный столик",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_stockholm-coffee-table__0181245_PE332924_S4.JPG",
+      "model" : "models/js/ik-stockholmcoffee-brown.js",
+      "type" : "1"
+    }, 
+    {
+      "name" : "Столик",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_Screen_Shot_2014-02-21_at_1.24.58_PM.png",
+      "model" : "models/js/GUSossingtonendtable.js",
+      "type" : "1"
+    }, 
+    {
+      "name" : "Обеденный стол",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_scholar-dining-table.jpg",
+      "model" : "models/js/cb-scholartable_baked.js",
+      "type" : "1"
+    }, 
+    {
+      "name" : "Обеденный стол",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_Screen_Shot_2014-01-28_at_6.49.33_PM.png",
+      "model" : "models/js/BlakeAvenuejoshuatreecheftable.js",
+      "type" : "1"
+    },
+    {
+      "name" : "Синий коврик",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_cb-blue-block60x96.png",
+      "model" : "models/js/cb-blue-block-60x96.js",
+      "type" : "8"
+    },
+    {
+      "name" : "Нью-Йорк постер",
+      "price": 8000,
+      "image" : "models/thumbnails/thumbnail_nyc2.jpg",
+      "model" : "models/js/nyc-poster2.js",
+      "type" : "2"
+    }
+  ]
 
     //Поиск по массиву объектов по названию
     var getProdInfo = function(prodName) {
