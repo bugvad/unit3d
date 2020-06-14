@@ -618,7 +618,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
           var prodDesc = getProdInfoRes[2] ? getProdInfoRes[2] : "&nbsp;";
 
 
-          var prodCode = '<hr /> <div> <div id="left"> <img id="tovar"' + ' src=' + prodImg + '> </div> <div id="right"> <div id="cart-title">' + prodName + '</div> <div id=cart-price>' + prodPrice + ' р.</div> <div id="cart-desc">' + prodDesc + '</div> <div> <a href="#" class="btn btn-default btn-sm" id=""> Купить </a> <a href="#" class="btn btn-default btn-sm" id=""> <span class="glyphicon glyphicon-remove"></span> </a> </div> </div> </div>'  
+          var prodCode = '<hr /> <div> <div id="left"> <img id="tovar"' + ' src=' + prodImg + '> </div> <div id="right"> <div id="cart-title">' + prodName + '</div> <div id=cart-price>' + prodPrice + ' р.</div> <div id="cart-desc">' + prodDesc + '</div> <div> <a href="http://theunit.tilda.ws/" class="btn btn-default btn-sm" id=""> Купить </a> <a href="#" class="btn btn-default btn-sm" id=""> <span class="glyphicon glyphicon-remove"></span> </a> </div> </div> </div>'  
 
           itemsDivDoor.append(prodCode);
 
