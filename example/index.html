@@ -94,44 +94,59 @@
               <br /><br />
               <button class="btn btn-block btn-danger" id="context-menu-delete">
                 <span class="glyphicon glyphicon-trash"></span> 
-                Delete Item
+                Удалить предмет
               </button>
             <br />
             <div class="panel panel-default">
-              <div class="panel-heading">Adjust Size</div>
+              <div class="panel-heading">Изменить размер</div>
               <div class="panel-body" style="color: #333333">
 
                 <div class="form form-horizontal" class="lead">
                   <div class="form-group">
                     <label class="col-sm-5 control-label">
-                       Width
+                       Ширина
                     </label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6" style="margin-right: -25px">
                       <input type="number" class="form-control" id="item-width">
                     </div>
+                    <div class="col-sm-1" style="position: relative; height: 34px">
+                      <div class="vertical-center">
+                          <p style="margin-bottom: 0px">см</p>
+                      </div>
+                    </div>    
                   </div>
                   <div class="form-group">
                     <label class="col-sm-5 control-label">
-                      Depth 
+                      Толщина
                     </label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6" style="margin-right: -25px">
                       <input type="number" class="form-control" id="item-depth">
                     </div>
+                    <div class="col-sm-1" style="position: relative; height: 34px">
+                      <div class="vertical-center">
+                          <p style="margin-bottom: 0px">см</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="display: inline-block">
                     <label class="col-sm-5 control-label">
-                      Height
+                      Высота
                     </label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6" style="margin-right: -25px">
                       <input type="number" class="form-control" id="item-height">
+                    </div>
+                    <!-- <div class="col-sm-1" style="text-align: center; float:left;"><div style="display: inline-block">см</div></div> -->
+                    <div class="col-sm-1" style="position: relative; height: 34px">
+                      <div class="vertical-center">
+                          <p style="margin-bottom: 0px">см</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <small><span class="text-muted">Measurements in inches.</span></small>
               </div>
             </div>
 
-            <label><input type="checkbox" id="fixed" /> Lock in place</label>
+            <label><input type="checkbox" id="fixed" /> Зафиксировать на месте</label>
             <br /><br />
             </div>
           </div>
@@ -139,7 +154,7 @@
           <!-- Floor textures -->
           <div id="floorTexturesDiv" style="display:none; padding: 0 20px">
             <div class="panel panel-default">
-              <div class="panel-heading">Adjust Floor</div>
+              <div class="panel-heading">Изменить покрытие</div>
               <div class="panel-body" style="color: #333333">
 
                 <div class="col-sm-6" style="padding: 3px">
@@ -154,7 +169,7 @@
           <!-- Wall Textures -->
           <div id="wallTextures" style="display:none; padding: 0 20px">
             <div class="panel panel-default">
-              <div class="panel-heading">Adjust Wall</div>
+              <div class="panel-heading">Изменить стену</div>
               <div class="panel-body" style="color: #333333">
                 <div class="col-sm-6" style="padding: 3px">
                   <a href="#" class="thumbnail texture-select-thumbnail" texture-url="rooms/textures/marbletiles.jpg" texture-stretch="false" texture-scale="300">
