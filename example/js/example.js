@@ -120,9 +120,9 @@ var ContextMenu = function(blueprint3d) {
 
     $("#context-menu-name").text(item.metadata.itemName);
 
-    $("#item-width").val(cmToIn(selectedItem.getWidth()).toFixed(0));
-    $("#item-height").val(cmToIn(selectedItem.getHeight()).toFixed(0));
-    $("#item-depth").val(cmToIn(selectedItem.getDepth()).toFixed(0));
+    $("#item-width").val((selectedItem.getWidth()).toFixed(0));
+    $("#item-height").val((selectedItem.getHeight()).toFixed(0));
+    $("#item-depth").val((selectedItem.getDepth()).toFixed(0));
 
     $("#context-menu").show();
 
@@ -131,9 +131,9 @@ var ContextMenu = function(blueprint3d) {
 
   function resize() {
     selectedItem.resize(
-      inToCm($("#item-height").val()),
-      inToCm($("#item-width").val()),
-      inToCm($("#item-depth").val())
+      ($("#item-height").val()),
+      ($("#item-width").val()),
+      ($("#item-depth").val())
     );
   }
 
